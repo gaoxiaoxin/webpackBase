@@ -1,0 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+#app {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
