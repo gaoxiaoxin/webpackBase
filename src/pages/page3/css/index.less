@@ -1,0 +1,83 @@
+body {
+    background-image: url("../images/download.jpg");
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.father {
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.son {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.code {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    margin: -50px 50px 0 -50px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    background-color: #1a71b9;
+    border: 0px;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    border: 0;
+    border-radius: 15px;
+    text-align: center;
+    outline: none;
+}
+
+.diff {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    img {
+        width: 202px;
+        height: 121px;
+    }
+}
+
+.son {
+    .code {
+        img {
+            cursor: pointer;
+            transition: all 0.6s;
+            margin-left: 20px;
+            width: 100px;
+            height: 100px;
+
+            &:hover {
+                transform: scale(1.6) translateX(20px);
+            }
+        }
+    }
+}

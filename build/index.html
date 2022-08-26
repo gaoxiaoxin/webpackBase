@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第五层梦境-1</title>
+<script defer src="js/manifest/manifest-bundle.js"></script><script defer src="js/vendor/vendor-bundle.js"></script><script defer src="js/page1/page1-bundle.js"></script><link href="css/page1.css" rel="stylesheet"></head>
+
+<body>
+    <!-- msh学长一直以来都有个好习惯就是锁门 
+        这一天hyg学姐拜托wx学长去msh学长寝室拿一个东西 可是苦于没有钥匙 
+        msh学长说他的寝室是智能门锁 如果收到请求 他可以远程处理
+    -->
+    <div class="container" id="info-box">
+        <div class="right">
+            <pre style="font-size: 15px;">
+！请认真阅读左边和右边的代码！
+小提示：
+1.发送请求可以使用postman等工具
+2.请求方法有GET/POST/PUT等...
+3.百度一下@RequestBody和@RequestParam注解的作用
+4.如果还返回传参有问题 请再看看有没有遗漏的地方
+5.还有问题，请找SIPC-梅书豪
+ //Controller层
+@RequestMapping(value = "/task5/getCode", 
+method = RequestMethod.POST)
+public CommonResult&ltCodeResult&gl 
+getCode(@RequestBody CodeSignParam codeSignParam, 
+        @RequestParam("studentId")Integer studentId){
+    //逻辑代码省略...
+}
+//Param类
+@Data
+public class CodeSignParam {
+    private String secretKey;
+}
+            </pre>
+        </div>
+        <div class="mid">
+            <div class="show">
+                <h3>
+                    http://2022.sipcoj.com:38081/task5/getCode
+                </h3>
+            </div>
+            <div class="form">
+
+                <input type="text" name="code" id="fasong" placeholder="输入你得到的code(提示双击跳转)" style="text-align: center;">
+                <!-- <a  href="./code.html" class="btna" onclick="send()">登录</a> -->
+                <a href="#" class="btna">登录</a>
+                <!-- <button  class="login" onclick="send()">登录</button> -->
+
+            </div>
+        </div>
+        <div class="left">
+            <pre style="font-size: 13px;text-align: left;">
+
+//Service实现类
+@Override
+public CommonResult&ltCodeResult&gt getCode(String studentId,
+                                CodeSignParam codeSignParam,
+                                HttpServletRequest request){
+    //验证传参
+    //验证Header内容
+    try{   
+        if(!request.getHeader("author").equals("msh-wx-hyg"))
+          SIPC-huxiaonanreturn CommonResult.fail("传参不合法");
+    } catch (Exception e) {
+        return CommonResult.fail();
+        }
+    }
+            </pre>
+        </div>
+
+    </div>
+</body>
+
+</html>

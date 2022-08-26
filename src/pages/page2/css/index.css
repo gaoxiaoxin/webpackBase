@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-image: url('../images/jiema.jpg');
+  background-size: cover;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  margin-top: 30px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+.main img {
+  width: 50vw;
+}
+.foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#btn {
+  width: 100px;
+  height: 30px;
+  background-color: #1a71b9;
+  border: 0px;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+#ipt {
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+}
+#ipt:focus {
+  outline: 0;
+  border: 1px solid #1a71b9;
+  box-shadow: 0px 0px 5px 0px #1a71b9;
+}
